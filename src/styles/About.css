@@ -1,0 +1,97 @@
+section .title {
+  position: relative;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+}
+
+section .title::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 185px;
+  height: 3px;
+  background: #9c8f6d;
+  transform: translateX(-50%);
+}
+section .title::after {
+  position: absolute;
+  bottom: -13px;
+  left: 50%;
+  padding: 5px;
+  color: black;
+  font-size: 20px;
+  background-color: #9c8f6d;
+  transform: translateX(-50%);
+}
+
+.about {
+  font-family: 'Montserrat';
+  padding: 0px 80px;
+}
+
+.about .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about .title:after {
+  color: white;
+  content: 'Who I Am';
+}
+
+.about .about-content .left {
+  width: 45%;
+}
+
+.about .about-content .left img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.about .about-content .right {
+  width: 55%;
+}
+
+.about .about-content .right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about .about-content .right .text .typing {
+  color: #9c8f6d;
+}
+
+.about .about-content .right p {
+  text-align: left;
+}
+
+@media (max-width: 1104px) {
+  .about .about-content .left img {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media (max-width: 947px) {
+  .about .about-content .column {
+    width: 50%;
+  }
+  .about .about-content .left {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+  }
+  .about .about-content .right {
+    flex: 100%;
+  }
+}
